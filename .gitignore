@@ -1,0 +1,7 @@
+*/*/*/*.pyc
+*/*/*.pyc
+*/*.pyc
+media
+.idea
+*.sqlite3
+.ropeproject
