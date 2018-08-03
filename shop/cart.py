@@ -7,7 +7,7 @@ from .models import Product
 class Cart:
 
     def __init__(self, request):
-        self.session = request.sesinon
+        self.session = request.session
         self.cart = self.session.get(settings.CART_SESSION_ID, {})
 
     def __iter__(self):
