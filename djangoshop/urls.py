@@ -25,3 +25,9 @@ from django.urls import include
 urlpatterns += [
     path('shop/', include('shop.urls')),
 ]
+
+from django.conf.urls.static import static
+from . import settings
+
+urlpatterns += static(settings.MEDIA_URL, document_root= \
+                      settings.MEDIA_ROOT)

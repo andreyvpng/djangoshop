@@ -8,7 +8,7 @@ class Category(models.Model):
         ordering = ('name',)
 
     def __str__(self):
-        return '{}(Category)'.format(name)
+        return '{}(Category)'.format(self.name)
 
 
 class Product(models.Model):

@@ -10,11 +10,11 @@
     {% for product in product_list %}
     <div class="col-sm-4 mt-5">
         <div class="card"> 
-            <img class="card-img-top" src="{{ MEDIA_URL }}{{ product.image }}" alt="Card image cap">
+            <img class="card-img-top" src="{{ product.image.url }}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">{{ product.name }}</h5>
                 <p class="price">{{ product.price }} Rub</p>
-                <form action="{% url 'cart-add' product.id %}" method="post">
+                <form action="" method="post">
                     {{ cart_product_form }}
                     {% csrf_token %}
                     <input class="btn btn-primary" type="submit" value="Add to cart">
