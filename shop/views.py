@@ -36,8 +36,7 @@ class CartAddView(generic.View):
 
         if form.is_valid():
             cleaned = form.cleaned_data
-            cart.add(product=product, quantity=cleaned['quantity'],
-                     update_quantity=cleaned['update'])
+            cart.add(product=product, quantity=cleaned['quantity'])
 
         return redirect('cart-detail')
 
