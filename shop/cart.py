@@ -23,7 +23,7 @@ class Cart:
 
             yield item
 
-    def add(self, product, quantity=1, update_quantity=False):
+    def add(self, product, quantity=1):
         product_id = str(product.id)
         if product_id not in self.cart:
             self.cart[product_id] = {'quantity': quantity, \
