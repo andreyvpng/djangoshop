@@ -1,7 +1,6 @@
 from django.views import generic
 
 from .models import Product
-from cart.cart import Cart
 from cart.forms import CartAddProductForm
 
 

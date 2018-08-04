@@ -13,6 +13,7 @@ class CartDetailView(generic.View):
 
         return render(request, 'cart/cart_detail.html', {'cart': cart})
 
+
 from django.shortcuts import get_object_or_404, redirect
 
 

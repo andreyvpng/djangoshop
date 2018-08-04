@@ -12,7 +12,7 @@ class OrderCreateView(generic.View):
         cart = Cart(request)
         form = OrderCreateForm
 
-        return render(request, 'order/order_create.html', \
+        return render(request, 'order/order_create.html',
                       {'cart': cart, 'form': form})
 
     def post(self, request):
@@ -23,8 +23,8 @@ class OrderCreateView(generic.View):
             order = form.save()
 
             for item in cart:
-                OrderItem.objects.create(order=order, product=item['product'], \
-                                price=item['price'], quantity=item['quantity'])
+                OrderItem.objects.create(order=order, product=item['product'],
+                                         price=item['price'], quantity=item['quantity'])
 
             cart.clear()
 
