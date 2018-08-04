@@ -24,6 +24,7 @@ from django.urls import include
 
 urlpatterns += [
     path('shop/', include('shop.urls')),
+    path('cart/', include('cart.urls')),
 ]
 
 from django.conf.urls.static import static

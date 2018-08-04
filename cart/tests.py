@@ -1,8 +1,8 @@
 from django.test import TestCase, Client
 from django.conf import settings
 
-from ..cart import Cart
-from ..models import Category, Product
+from .cart import Cart
+from shop.models import Category, Product
 
 
 class CartTestCase(TestCase):
